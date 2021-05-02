@@ -1,5 +1,5 @@
 var balloon,balloonImage1,balloonImage2;
-var cityImage;
+
 // create database and position variable here
 
 function preload(){
@@ -29,18 +29,22 @@ function draw() {
   if(keyDown(LEFT_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
     //write code to move air balloon in left direction
+    balloon.velocityX = -2;
   }
   else if(keyDown(RIGHT_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
     //write code to move air balloon in right direction
+    balloon.velocityX = 2;
   }
   else if(keyDown(UP_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
     //write code to move air balloon in up direction
+    balloon.velocitY =-2;
   }
   else if(keyDown(DOWN_ARROW)){
     balloon.addAnimation("hotAirBalloon",balloonImage2);
     //write code to move air balloon in down direction
+    balloon.velocityY = 2;
   }
 
   drawSprites();
